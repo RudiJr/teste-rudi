@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function fetchProduct(url) {
     let data = await fetch(url);
     let response = await data.json();
+    console.log(response)
 
     for (let i = 0; i < response.length; i++) {
       productsGet.innerHTML += `
