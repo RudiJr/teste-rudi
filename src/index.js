@@ -1,14 +1,9 @@
-const imagem = document.querySelector(".produto-imagem");
-const nome = document.querySelector(".produto-titulo");
-const preco = document.querySelector(".produto-preco-comparado");
 
 document.addEventListener("DOMContentLoaded", function () {
   let productsGet = document.querySelector("#produtos-pegar");
   async function fetchProduct(url) {
     let data = await fetch(url);
     let response = await data.json();
-
-    console.log(nome)
 
     for (let i = 0; i < response.length; i++) {
       productsGet.innerHTML += `
